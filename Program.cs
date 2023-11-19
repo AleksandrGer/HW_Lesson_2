@@ -1,51 +1,33 @@
-﻿// Задача 25: Напишите цикл, который принимает на вход два числа (A и B) и возводит число A в натуральную степень B.
-// 3, 5 -> 243 (3⁵)
-// 2, 4 -> 16
-// Console.WriteLine("Введите число:");
-// int number = Convert.ToInt32(Console.ReadLine());
-// Console.WriteLine("Введите степень:");
-// int pow = Convert.ToInt32(Console.ReadLine());
-// Console.WriteLine($"Число {number} в степени {pow} = {GetPow(number, pow)}");
-// int GetPow (int n, int p)
-// { 
-//   int res = 0;
-//   for (int i = 1; i < p; i++)
-//   { 
-//     res = n * n;
-//   }
-//   return res;
-// }
-
-// Задача 27: Напишите программу, которая принимает на вход число и выдаёт сумму цифр в числе.
-// 452 -> 11
-// 82 -> 10
-// 9012 -> 12
-// Console.Write("Введите число:");
-// int number = Convert.ToInt32(Console.ReadLine());
-// Console.WriteLine($"Сумма цифр в числе {number} = {GetSum(number)}");
-// int GetSum (int num)
+﻿// Задача 41: Пользователь вводит с клавиатуры M чисел.
+// Посчитайте, сколько чисел больше 0 ввёл пользователь.
+// 0, 7, 8, -2, -2 -> 2
+// 1, -7, 567, 89, 223-> 3
+// int size = 5;
+// int count = 0;
+// Console.WriteLine($"Введите заданное количество чисел ({size}): ");
+// int[] numbers = new int[size];
+// for (int i = 0; i < size; i++)
 // {
-//     int sum = 0;
-//     while(num > 0)
-//     {
-//         sum += num % 10;
-//         num /= 10;
-//     }
-//     return sum;
+//     numbers[i] = Convert.ToInt32(Console.ReadLine());
+//     if (numbers[i] > 0) count++;
 // }
+// Console.WriteLine();
+// Console.WriteLine($"{String.Join("; ", numbers)} -> {count}");
 
+// Задача 43: Напишите программу, которая найдёт точку пересечения двух прямых,
+// заданных уравнениями y = k1 * x + b1, y = k2 * x + b2;
+// значения b1, k1, b2 и k2 задаются пользователем.
+// b1 = 2, k1 = 5, b2 = 4, k2 = 9 -> (-0,5; -0,5)
+// Console.WriteLine($"Введите значение b1: ");
+// int b1 = Convert.ToInt32(Console.ReadLine());
+// Console.WriteLine($"Введите значение k1: ");
+// int k1 = Convert.ToInt32(Console.ReadLine());
+// Console.WriteLine($"Введите значение b2: ");
+// int b2 = Convert.ToInt32(Console.ReadLine());
+// Console.WriteLine($"Введите значение k2: ");
+// int k2 = Convert.ToInt32(Console.ReadLine());
 
-// Задача 29: Напишите программу, которая задаёт массив из 8 элементов и выводит их на экран.
-// 1, 2, 5, 7, 19 -> [1, 2, 5, 7, 19]
-// 6, 1, 33 -> [6, 1, 33]
-// int[] result = GetBinaryArray(8);
-// Console.WriteLine($"[{String.Join("; ", result)}]");
-// int [] GetBinaryArray(int size)
-// {
-//     int [] array = new int[size];
-//     for(int i = 0; i < array.Length; i++)
-//     {
-//         array[i] = new Random().Next(99, 1000);
-//     }
-//     return array;
-// }
+//     double x = (b2-b1) / (k1-k2);
+//     double y = k1 * x + b1;
+
+// Console.WriteLine($"b1 = {b1}, k1 = {k1}, b2 = {b2}, k2 = {k2} -> ({x}; {y})");
